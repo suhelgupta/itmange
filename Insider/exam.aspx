@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Insider/insider.master" AutoEventWireup="true" CodeFile="exam.aspx.cs" Inherits="Insider_exam" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="insider.master" AutoEventWireup="true" CodeFile="exam.aspx.cs" Inherits="Insider_exam" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
@@ -24,7 +24,7 @@
                     <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
                     <asp:BoundField DataField="starttime" HeaderText="starttime" SortExpression="starttime" />
                     <asp:BoundField DataField="endtime" HeaderText="endtime" SortExpression="endtime" />
-                    <asp:HyperLinkField DataNavigateUrlFields="glink" Target="_blank" Text="Srart Exam" />
+                    <asp:HyperLinkField DataNavigateUrlFields="glink" Target="_blank" Text="Start Exam" />
                 </Columns>
                 <FooterStyle BackColor="White" ForeColor="#333333" />
                 <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />

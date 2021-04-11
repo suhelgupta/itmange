@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Library/Library.master" AutoEventWireup="true" CodeFile="Issubook.aspx.cs" Inherits="Library_Issubook" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Library.master" AutoEventWireup="true" CodeFile="Issubook.aspx.cs" Inherits="Library_Issubook" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>Issu Book</title>
@@ -14,6 +14,11 @@
             display: inline-block;
         }
 
+
+        body {
+            font-family: "Lato", sans-serif;
+            background: url("/Images/libimg.jpg") center center/cover;
+        }
         .container1 {
             width: 35%;
             margin: 2px auto;

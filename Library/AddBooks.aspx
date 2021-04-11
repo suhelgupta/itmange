@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Library/Library.master" AutoEventWireup="true" CodeFile="AddBooks.aspx.cs" Inherits="Library_AddBooks" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Library.master" AutoEventWireup="true" CodeFile="AddBooks.aspx.cs" Inherits="Library_AddBooks" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>Add Book</title>
@@ -8,6 +8,11 @@
     <style>
         .paddmarg {
             padding: 4px 12px;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+            background: url("/Images/libimg.jpg") center center/cover;
         }
 
         .col-md-6 {

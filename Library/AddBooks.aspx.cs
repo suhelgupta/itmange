@@ -15,14 +15,11 @@ public partial class Library_AddBooks : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
-       
         string Searchby = DropDownList1.SelectedValue;
         string search = TextBox7.Text;
         string sqlcmd = "SELECT * FROM [libaddbook] WHERE (" + Searchby + " like '%" + search + "%') ";
         SqlDataSource1.SelectCommand = sqlcmd;
-
     }
-
 
     protected void Button1_Click(object sender, EventArgs e)
     {
@@ -36,7 +33,6 @@ public partial class Library_AddBooks : System.Web.UI.Page
         count = Convert.ToInt16(quantity);
         int checkexist = checktotalbook(bookid);
         TextBox6.InnerText = checkexist.ToString();
-
 
         if (checkexist == 0)
         {

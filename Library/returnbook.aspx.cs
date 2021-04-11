@@ -40,7 +40,7 @@ public partial class Library_returnbook : System.Web.UI.Page
         bool b = checkroll(roll);
         if (a == true && b == true)
         {
-            TextBox3.Text += "i am in";
+            //TextBox3.Text += "i am in";
             SqlConnection con = new SqlConnection(cs);
             con.Open();
             SqlCommand mycommand = con.CreateCommand();
@@ -89,7 +89,7 @@ public partial class Library_returnbook : System.Web.UI.Page
                 con2.Open();
                 cmd2.ExecuteNonQuery();
                 con2.Close();
-                TextBox3.Text += "i am decmet out";
+                //TextBox3.Text += "i am decmet out";
             }
 
         }
@@ -156,7 +156,7 @@ public partial class Library_returnbook : System.Web.UI.Page
                 //con2.Open();
                 //cmd2.ExecuteNonQuery();
                 //con2.Close();
-                TextBox3.Text += "i am code out";
+                //TextBox3.Text += "i am code out";
 
                 return true;
             }
