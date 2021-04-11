@@ -31,16 +31,15 @@ public partial class outsider_admission : System.Web.UI.Page
                         SqlCommand myCommand = con.CreateCommand();
                         myCommand.CommandText = ("SELECT  * from Register WHERE email='" + Session["cemail"].ToString() + "'"); // Where Login is your table . UserName and Password Columns
                         SqlDataReader myReader = myCommand.ExecuteReader();
-                        while(myReader.Read())
+                        while (myReader.Read())
                         {
-                                TextBox1.Text = myReader["fname"].ToString();
-                                //TextBox1.Attributes.Add("placeholder", myReader["fname"].ToString());
-                                lname.Value = myReader["lname"].ToString();
-                                //lname.Attributes["placeholder"] = myReader["lanme"].ToString();
-                                emailid.Value = myReader["email"].ToString();
-                                stphone.Value = myReader["phone"].ToString();
+                            TextBox1.Text = myReader["fname"].ToString();
+                            //TextBox1.Attributes.Add("placeholder", myReader["fname"].ToString());
+                            lname.Value = myReader["lname"].ToString();
+                            //lname.Attributes["placeholder"] = myReader["lanme"].ToString();
+                            emailid.Value = myReader["email"].ToString();
+                            stphone.Value = myReader["phone"].ToString();
                         }
-
                     }
                     catch
                     {
@@ -51,21 +50,25 @@ public partial class outsider_admission : System.Web.UI.Page
                 {
                     Response.Redirect("../Login.aspx");
                 }
+
             }
             else
             {
                 Response.Redirect("../Login.aspx");
             }
 
+        //}
+        //    }
+            
             bool checkusers = Checkuser();
             if (checkusers)
             {
-                Response.Write("<script>alert(\"Success\")</script>");
+                //Response.Write("<script>alert(\"Success\")</script>");
                 mainform.Style.Add("display", "none");
             }
             else
             {
-                Response.Write("<script>alert(\"fail\")</script>");
+                //Response.Write("<script>alert(\"fail\")</script>");
 
             }
         }

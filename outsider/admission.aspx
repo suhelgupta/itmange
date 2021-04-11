@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/outsider/outsider.master" AutoEventWireup="true" CodeFile="admission.aspx.cs" Inherits="outsider_admission" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="outsider.master" AutoEventWireup="true" CodeFile="admission.aspx.cs" Inherits="outsider_admission" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>Admission form</title>

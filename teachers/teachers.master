@@ -38,71 +38,87 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <%--<a class="navbar-brand" href="#">Elphi</a>--%>
-                <img class="img-fluid mx-3" src="/../Images/logo1.png" height="50" width="50" />
+                <img class="img-fluid mx-3" src="/Images/logo1.png" height="50" width="50" />
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../Home.aspx">Home</a>
+                            <a class="nav-link active" aria-current="page" href="Home.aspx">Home</a>
                         </li>
+                        
+                        <%--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admissions
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                                <li><a class="dropdown-item" href="taddmision.aspx">Admission</a></li>
+                                <li><a class="dropdown-item" href="feestructure.aspx">Fees Structure</a></li>
+                                <li><a class="dropdown-item" href="reservation.aspx">Reservation of Seats</a></li>
+                                <li><a class="dropdown-item" href="Rules.aspx">Rules</a></li>
+                            </ul>
+                        </li>--%>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Studentlist.aspx">Student List</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Examination.aspx">Examination</a>
+                        </li>
+
+                        <%--<li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Activities.aspx">Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Facilities.aspx">Facilities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Home.aspx#Photos">Photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Home.aspx#OurFalcuty">Faculty</a>
+                        </li>--%>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../Images/syallabus.pdf" target="_blank">Syallabus</a>
+                        </li>
+                      
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> About us
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-                                <li><a class="dropdown-item" href="#">About IT Department</a></li>
-                                <li><a class="dropdown-item" href="#">History</a></li>
-                                <li><a class="dropdown-item" href="#">Vision,misson & Goals</a></li>
+                                <li><a class="dropdown-item" href="AboutDept.aspx">About IT Department</a></li>
+                                <li><a class="dropdown-item" href="HISTORY.aspx">History</a></li>
+                                <li><a class="dropdown-item" href="Goal.aspx">Vision,misson & Goals</a></li>
                             </ul>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Home.aspx#ContactUS">Contact Us</a>     
+                        </li>
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admissions out
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Others
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-                                <li><a class="dropdown-item" href="admission.aspx">Admission Form</a></li>
-                                <li><a class="dropdown-item" href="#">Fees Structure</a></li>
-                                <li><a class="dropdown-item" href="#">Reservation of Seats</a></li>
-                                <li><a class="dropdown-item" href="#">Rules</a></li>
+                                <li><a class="dropdown-item" href="Facilities.aspx">Facilities</a></li>
+                                <li><a class="dropdown-item" href="Activities.aspx">Activities</a></li>
+                                <li><a class="dropdown-item" href="Home.aspx#OurFalcuty">Faculty</a></li>
+                                <li><a class="dropdown-item" href="Home.aspx#Photos">Photos</a></li>
+
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Activities</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Facilities</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../Home.aspx#Photos">Photos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../Home.aspx#OurFalcuty">Faculty</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">NAAC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Library</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Examination
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-                                <li><a class="dropdown-item" href="#">Syllabus</a></li>
-                                <li><a class="dropdown-item" href="#">Sample Question Papers</a></li>
-                                <li><a class="dropdown-item" href="#">Main Exam</a></li>
-                                <li><a class="dropdown-item" href="#">Result</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/../Home.aspx#ContactUS">Contact Us</a>     
                         </li>
                     </ul>
                     <form class="d-flex">
+                        <div id="withoutlogin" runat ="server">
+                            <button class="btn btn-outline-success mx-2" onclick="location.href='Login.aspx'" type="button">Login</button>
+                            <button class="btn btn-outline-success mx-2" onclick="location.href='Registration.aspx'" type="button">Register</button>
+                        </div>
                         <div id="withlogin" runat ="server">
                             <a href="#" style="text-decoration:none;"><i class="fa fa-user" style="color:white;" aria-hidden="true"></i>&nbsp;
                             <p style="color:white;" class=" d-inline-block" id="usename" runat="server">Hello </p></a>&nbsp;&nbsp;
-                            <button class="btn btn-outline-primary mx-2" onclick="location.href='../logout.aspx'" type="button">Logout</button>
+                            <button class="btn btn-outline-primary mx-2" onclick="location.href='logout.aspx'" type="button">Logout</button>
                             
                             <%--<asp:Button ID="logout" runat="server" Text="logout" OnClick="logout_Click" />--%>
                             <%--<button class="btn btn-success mx-2" onclick="location.href='Registration.aspx'" type="button">Register</button>--%>

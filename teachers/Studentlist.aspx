@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/teachers/teachers.master" AutoEventWireup="true" CodeFile="Studentlist.aspx.cs" Inherits="teachers_Studentlist" %>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" MasterPageFile="teachers.master" AutoEventWireup="true" CodeFile="Studentlist.aspx.cs" Inherits="teachers_Studentlist" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>Student List</title>
@@ -42,27 +42,12 @@
                 <div class="CodeAreaa">
 
                     <asp:button runat="server" cssclass="btn btn-danger" text="Update Student List" onclick="Unnamed1_Click"></asp:button>
-                    <asp:button runat="server" cssclass="btn btn-danger" text="Year Increment"></asp:button>
-                    <asp:button runat="server" cssclass="btn btn-danger" text="Alot Roll No."></asp:button>
+                    <%--<asp:button runat="server" cssclass="btn btn-danger" text="Year Increment"></asp:button>
+                    <asp:button runat="server" cssclass="btn btn-danger" text="Alot Roll No."></asp:button>--%>
                 </div>
-                <div class="container row ">
-                    <div class="col-md-4 myitems" id="firstyear" onclick="Toogle(a='fylist')">
-                        First Year
-                    </div>
-
-                    <div class="col-md-4 myitems" id="secondyear" onclick="Toogle(a='sylist')">
-                        Second Year
-                    </div>
-
-                    <div class="col-md-4 myitems" id="thirdyear" onclick="Toogle(a='tylist')">
-                        Third Year
-                    </div>
-
-                </div>
-
                 <br /><br />
-                <div id="fylist" class="container" style="display:none">
-                    <asp:GridView runat="server" CssClass="dataTable" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource1" GridLines="Vertical">
+                <div id="fylist" class="container" >
+                    <asp:GridView runat="server" ID="GridView1" CssClass="dataTable" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource1" GridLines="Vertical" AllowSorting="True">
                         <AlternatingRowStyle BackColor="#DCDCDC" />
                         <Columns>
                             <%--<asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />--%>
@@ -73,6 +58,9 @@
                             <asp:BoundField DataField="lname" HeaderText="lname" SortExpression="lname" />
                             <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                             <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone" />
+                            <asp:CommandField ButtonType="Button" ShowEditButton="True">
+                            <ControlStyle CssClass="btn btn-primary" />
+                            </asp:CommandField>
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -108,10 +96,13 @@
                             <asp:Parameter Name="Id" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <div class="mybtn">
+                        <asp:Button ID="Button3" CssClass="btn btn-success" runat="server" Text="Export as exel" OnClick="Button1_Click"></asp:Button>
+                    </div>
                 </div>
                 <br /><br />
-                <div id="sylist" class="container" style="display:none">
-                    <asp:GridView runat="server" CssClass="dataTable" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource2" GridLines="Vertical">
+                <div id="sylist" class="container" >
+                    <asp:GridView runat="server" ID="GridView2" CssClass="dataTable" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource2" GridLines="Vertical">
                         <AlternatingRowStyle BackColor="#DCDCDC" />
                         <Columns>
                             <%--<asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />--%>
@@ -122,6 +113,9 @@
                             <asp:BoundField DataField="lname" HeaderText="lname" SortExpression="lname" />
                             <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                             <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone" />
+                            <asp:CommandField ButtonType="Button" ShowEditButton="True">
+                            <ControlStyle CssClass="btn btn-primary" />
+                            </asp:CommandField>
                         </Columns>
                         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
                         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -157,10 +151,13 @@
                             <asp:Parameter Name="Id" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <div class ="mybtn">
+                        <asp:Button ID="Button1" CssClass="btn btn-success" runat="server" Text="Export as exel" OnClick="Button2_Click"></asp:Button>
+                    </div>
                 </div>
                 <br /><br />
-                <div id="tylist" class="container" style="display:none">
-                    <asp:GridView runat="server" CssClass="dataTable" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource3" GridLines="Vertical" AllowSorting="True">
+                <div id="tylist" class="container" >
+                    <asp:GridView runat="server" ID="GridView3" CssClass="dataTable" AllowPaging="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataKeyNames="Id" DataSourceID="SqlDataSource3" GridLines="Vertical" AllowSorting="True">
                         <AlternatingRowStyle BackColor="#DCDCDC" />
                         <Columns>
                             <%--<asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />--%>
@@ -209,6 +206,9 @@
                             <asp:Parameter Name="Id" Type="Int32" />
                         </UpdateParameters>
                     </asp:SqlDataSource>
+                    <div class="mybtn">
+                        <asp:Button ID="Button2" CssClass="btn btn-success" runat="server" Text="Export as exel" OnClick="Button3_Click"></asp:Button>
+                    </div>
                 </div>
 
             </center>

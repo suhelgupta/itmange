@@ -29,12 +29,13 @@ public partial class Login : System.Web.UI.Page
         string fname = "";
         string roll = "";
 
+
         //encording the password
         byte[] EncodePass = Encoding.UTF8.GetBytes(TextBox1.Text);
         string Epassword = Convert.ToBase64String(EncodePass);
 
         // select the table name
-        if(posts == "1") { tablename = "Register"; redrict = "Home.aspx"; post = "out";  }
+        if(posts == "1") { tablename = "Register"; redrict = "/outsider/Home.aspx"; post = "out";  }
         else if(posts == "2") { tablename = "Register"; redrict = "/Insider/Home.aspx"; post = "in"; }
         else if (posts == "3") { tablename = "staf"; redrict = "/Library/Home.aspx"; post = "lib"; }
         else if (posts == "4") { tablename = "staf"; redrict = "/outsider/Home.aspx"; post = "hod"; }
@@ -57,9 +58,15 @@ public partial class Login : System.Web.UI.Page
             {
                 if (email.CompareTo(myReader["email"].ToString()) == 0 && password.CompareTo(myReader["Password"].ToString()) == 0) // A little messy but does the job to compare your infos assuming your using a textbox for username and password
                 {
-                    if(post == "in")
+                    if (post == "in")
                     {
                         roll = checkeroll(email);
+                        if (roll == "not found")
+                        {
+                            login = false;
+                            break;
+                            //Response.Write("<script>alert(\"It seems you are not the insider member\")</script>");
+                        }
                     }
                     login = true;
                     fname = myReader["fname"].ToString();
@@ -88,8 +95,9 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
-            //MessageBox.Show("Invalid UserName or Password", "Access Denied"); // Error message
-            //TextBox1.Text = "Login fail" + password;
+            //    MessageBox.Show("Invalid UserName or Password", "Access Denied"); // Error message
+            //    TextBox1.Text = "Login fail" + password;
+            Response.Write("<script>alert(\"Please enter the correct user id password and type\")</script>");
         }
     }
 
