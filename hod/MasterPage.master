@@ -117,7 +117,7 @@
                         <div id="withlogin" runat ="server">
                             <a href="#" style="text-decoration:none;"><i class="fa fa-user" style="color:white;" aria-hidden="true"></i>&nbsp;
                             <p style="color:white;" class=" d-inline-block" id="usename" runat="server">Hello </p></a>&nbsp;&nbsp;
-                            <button class="btn btn-outline-primary mx-2" onclick="location.href='logout.aspx'" type="button">Logout</button>
+                            <button class="btn btn-outline-primary mx-2" onclick="location.href='../logout.aspx'" type="button">Logout</button>
                             
                             <%--<asp:Button ID="logout" runat="server" Text="logout" OnClick="logout_Click" />--%>
                             <%--<button class="btn btn-success mx-2" onclick="location.href='Registration.aspx'" type="button">Register</button>--%>

@@ -9,6 +9,25 @@ public partial class Library_Library : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        if (!IsPostBack)
+        {
+            if (Session["login"] != null && Session["post"] != null && Session["cemail"] != null)
+            {
+                if (Session["login"].ToString() == "true" && Session["post"].ToString() == "lib")
+                {
+                }
+                else
+                {
+                    Response.Redirect("../Login.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("../Login.aspx");
+            }
+        }
+
         if (!IsPostBack)
         {
             if (Session["login"] != null)

@@ -11,6 +11,24 @@ public partial class hod_MasterPage : System.Web.UI.MasterPage
     {
         if (!IsPostBack)
         {
+            if (Session["login"] != null && Session["post"] != null && Session["cemail"] != null)
+            {
+                if (Session["login"].ToString() == "true" && Session["post"].ToString() == "hod")
+                {
+                }
+                else
+                {
+                    Response.Redirect("../Login.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("../Login.aspx");
+            }
+        }
+
+        if (!IsPostBack)
+        {
             if (Session["login"] != null)
             {
                 withoutlogin.Style.Add(HtmlTextWriterStyle.Display, "none");

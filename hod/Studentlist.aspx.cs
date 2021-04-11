@@ -37,7 +37,9 @@ public partial class teachers_Studentlist : System.Web.UI.Page
                     SqlConnection con1 = new SqlConnection(cs);
                     con1.Open();
                     SqlCommand myCommand1 = new SqlCommand("INSERT INTO Students (year,class,fname,lname,email,phone) VALUES('" + DateTime.Now.Year + "','" + myReader["yoa"].ToString() + "','" + myReader["fname"].ToString() + "','" + myReader["lname"].ToString() + "','" + myReader["email"].ToString() + "','" + myReader["phone"].ToString() + "')", con1);
+                    SqlCommand myCommand2 = new SqlCommand("UPDATE Register SET post= 'in' where email = '"+ myReader["email"].ToString() +"'", con1);
                     myCommand1.ExecuteNonQuery();
+                    myCommand2.ExecuteNonQuery();
                     con1.Close();
                     message.InnerText = "Form UpDAted Sucessfully ";
                 }
